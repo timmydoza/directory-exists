@@ -1,4 +1,5 @@
 # directory-exists
+[![Build Status](https://travis-ci.org/timmydoza/directory-exists.svg?branch=master)](https://travis-ci.org/timmydoza/directory-exists)
 
 ## Why?
 Because fs.exists is deprecated and sometimes you just need to know if a directory exists or not.
