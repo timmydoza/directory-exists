@@ -20,5 +20,5 @@ directoryExists(directory, callback(result) {
 ### Synchronous
 
 ```
-directoryExists.sync(directory); //return boolean
+directoryExists.sync(directory); //returns boolean
 ```
