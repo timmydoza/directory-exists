@@ -1,0 +1,24 @@
+{
+  "name": "directory-exists",
+  "version": "0.0.1",
+  "description": "Check to see if a directory exists",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "directory",
+    "folder",
+    "check",
+    "exist",
+    "exists"
+  ],
+  "author": "timmydoza",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
