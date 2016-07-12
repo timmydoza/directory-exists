@@ -1,11 +1,8 @@
 {
   "name": "directory-exists",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check to see if a directory exists",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "mocha"
   },
@@ -16,7 +13,11 @@
     "exist",
     "exists"
   ],
-  "author": "timmydoza",
+  "author": "timmydoza <timmydoza@gmail.com>",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/timmydoza/directory-exists"
+  },
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
