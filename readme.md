@@ -1,25 +1,35 @@
-# directory-exists
-[![Build Status](https://travis-ci.org/timmydoza/directory-exists.svg?branch=master)](https://travis-ci.org/timmydoza/directory-exists)
+# directory-exists [![Build Status](https://travis-ci.org/timmydoza/directory-exists.svg?branch=master)](https://travis-ci.org/timmydoza/directory-exists)
 
-## Why?
-Because fs.exists is deprecated and sometimes you just need to know if a directory exists or not.
+> Check if a directory exists or not, synchronously or asynchronously
+
+## Install
+
+```
+$ npm install --save directory-exists
+```
 
 ## Usage:
 
-`npm install directory-exists`
-
-`var directoryExists = require('directory-exists')`
-
 ### Asynchronous
 
-```
+```js
+const directoryExists = require('directory-exists');
 directoryExists(directory, callback(result) {
-  //result is a boolean
+  // result is a boolean
 };
 ```
 
 ### Synchronous
 
+```js
+const directoryExists = require('directory-exists');
+directoryExists.sync(directory);
+//=> true||false
 ```
-directoryExists.sync(directory); //returns boolean
-```
+
+## Why not use the `fs.exists`?
+Because asynchronous `fs.exists` is [deprecated](https://nodejs.org/api/fs.html#fs_fs_exists_path_callback). Synchronous `fs.existsSync` is still [fine](https://nodejs.org/api/fs.html#fs_fs_existssync_path) to use, but this library does _both_, sync and async.
+
+## License
+
+MIT © [Tim Mendoza](http://timmydoza.com/)
