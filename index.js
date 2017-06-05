@@ -4,7 +4,7 @@ var resolve = require('path').resolve;
 module.exports = function(directory, callback) {
   fs.stat(resolve(directory), function(err, stat) {
     if (err) {
-      callback(false);
+      return callback(false);
     }
     callback(stat.isDirectory());
   });
