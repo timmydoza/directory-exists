@@ -1,6 +1,6 @@
 # directory-exists [![Build Status](https://travis-ci.org/timmydoza/directory-exists.svg?branch=master)](https://travis-ci.org/timmydoza/directory-exists)
 
-> Check if a directory exists or not, synchronously or asynchronously
+> Check if a directory exists - synchronously or asynchronously
 
 ## Install
 
@@ -15,7 +15,7 @@ $ npm install --save directory-exists
 ```js
 const directoryExists = require('directory-exists');
 directoryExists(directory, callback(result) {
-  // result is a boolean
+  // returns boolean
 };
 ```
 
@@ -23,8 +23,8 @@ directoryExists(directory, callback(result) {
 
 ```js
 const directoryExists = require('directory-exists');
-directoryExists.sync(directory);
-//=> true||false
+
+directoryExists.sync(directory); //retuns boolean
 ```
 
 ## Why not use the `fs.exists`?
