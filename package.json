@@ -7,11 +7,25 @@
     "test": "mocha"
   },
   "keywords": [
-    "directory",
-    "folder",
     "check",
+    "dir",
+    "dirs",
+    "directories"
+    "directory",
     "exist",
-    "exists"
+    "exists",
+    "file",
+    "filepath",
+    "files",
+    "folder",
+    "fp",
+    "fs",
+    "node",
+    "node.js",
+    "path",
+    "paths",
+    "system"
+
   ],
   "author": "timmydoza <timmydoza@gmail.com>",
   "repository": {
