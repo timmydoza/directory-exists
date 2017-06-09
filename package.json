@@ -1,6 +1,6 @@
 {
   "name": "directory-exists",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check to see if a directory exists",
   "main": "index.js",
   "scripts": {
