@@ -32,4 +32,4 @@ Because asynchronous `fs.exists` is [deprecated](https://nodejs.org/api/fs.html#
 
 ## License
 
-MIT © [Tim Mendoza](http://timmydoza.com/)
+MIT © timmydoza
