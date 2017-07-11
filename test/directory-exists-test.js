@@ -5,21 +5,21 @@ var directoryExists = require(__dirname + '/../index.js');
 
 describe('The directoryExists function', function() {
   it('return true if a directory exists and is a directory', function(done) {
-    var result = directoryExists(__dirname, function(result) {
+    var result = directoryExists(__dirname, function(error, result) {
     expect(result).to.eql(true);
     setImmediate(done);
     });
   });
 
   it('should return false if path does not exist', function(done) {
-    var result = directoryExists(__dirname + '/fakeDirectory', function(result) {
+    var result = directoryExists(__dirname + '/fakeDirectory', function(error, result) {
     expect(result).to.eql(false);
     setImmediate(done);
     });
   });
 
   it('should return false if path is a file', function(done) {
-    var result = directoryExists(__dirname + '/directory-exists-test.js', function(result) {
+    var result = directoryExists(__dirname + '/directory-exists-test.js', function(error, result) {
     expect(result).to.eql(false);
     setImmediate(done);
     });
