@@ -41,7 +41,7 @@ const directoryExists = require('directory-exists');
 
 (async function() {
   const result = await directoryExists(directory);
-  console.log(result);
+  console.log(result);  // result is a boolean
 })();
 ```
 
@@ -53,7 +53,7 @@ const directoryExists = require('directory-exists');
 directoryExists.sync(directory); // retuns a boolean
 ```
 
-## Why not use the `fs.exists`?
+## Why not use `fs.exists`?
 Because asynchronous `fs.exists` is [deprecated](https://nodejs.org/api/fs.html#fs_fs_exists_path_callback). Synchronous `fs.existsSync` is still [fine](https://nodejs.org/api/fs.html#fs_fs_existssync_path) to use, but this library does both sync and async.
 
 ## License
