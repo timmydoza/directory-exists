@@ -54,7 +54,7 @@ directoryExists.sync(directory); // retuns a boolean
 ```
 
 ## Why not use the `fs.exists`?
-Because asynchronous `fs.exists` is [deprecated](https://nodejs.org/api/fs.html#fs_fs_exists_path_callback). Synchronous `fs.existsSync` is still [fine](https://nodejs.org/api/fs.html#fs_fs_existssync_path) to use, but this library does _both_, sync and async.
+Because asynchronous `fs.exists` is [deprecated](https://nodejs.org/api/fs.html#fs_fs_exists_path_callback). Synchronous `fs.existsSync` is still [fine](https://nodejs.org/api/fs.html#fs_fs_existssync_path) to use, but this library does both sync and async.
 
 ## License
 
