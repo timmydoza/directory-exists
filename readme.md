@@ -14,8 +14,8 @@ $ npm install --save directory-exists
 
 ```js
 const directoryExists = require('directory-exists');
-directoryExists(directory, callback(result) {
-  // returns boolean
+directoryExists(directory, callback(error, result) {
+  // result is a boolean
 };
 ```
 
@@ -24,7 +24,7 @@ directoryExists(directory, callback(result) {
 ```js
 const directoryExists = require('directory-exists');
 
-directoryExists.sync(directory); //retuns boolean
+directoryExists.sync(directory); // retuns a boolean
 ```
 
 ## Why not use the `fs.exists`?
