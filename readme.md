@@ -9,14 +9,40 @@ $ npm install --save directory-exists
 ```
 
 ## Usage:
+`directory` should be a string of a relative or absolute path.
 
 ### Asynchronous
 
+##### With Callback:
+
 ```js
 const directoryExists = require('directory-exists');
-directoryExists(directory, callback(error, result) {
-  // result is a boolean
-};
+
+directoryExists(directory, (error, result) => {
+  console.log(result); // result is a boolean
+});
+```
+
+##### With Promise:
+If no callback function is supplied, directoryExists returns a promise.
+
+```js
+const directoryExists = require('directory-exists');
+
+directoryExists(directory).then(result => {
+  console.log(result); // result is a boolean
+});
+```
+
+##### Async/await:
+
+```js
+const directoryExists = require('directory-exists');
+
+(async function() {
+  const result = await directoryExists(directory);
+  console.log(result);
+})();
 ```
 
 ### Synchronous
