@@ -3,9 +3,9 @@ var expect = chai.expect;
 
 var directoryExists = require(__dirname + '/../index.js');
 
-var ERROR_MSG = 'directory-exists expect a non-empty string as its first argument';
+var ERROR_MSG = 'directory-exists expects a non-empty string as its first argument';
 
-describe('The directoryExists function', function() {
+describe('The directoryExists function (callback)', function() {
   it('return true if a directory exists and is a directory', function(done) {
     directoryExists(__dirname, function(error, result) {
       expect(error).to.be.null;
@@ -54,6 +54,30 @@ describe('The directoryExists function', function() {
     expect(badFnUndefined).to.throw(TypeError, ERROR_MSG);
 
   });
+});
+
+describe('The directoryExists function (promise)', function() {
+  it('return true if a directory exists and is a directory', function(done) {
+    directoryExists(__dirname).then(function(result) {
+      expect(result).to.eql(true);
+      setImmediate(done);
+    });
+  });
+
+  it('should return false if path does not exist', function(done) {
+    directoryExists(__dirname + '/fakeDirectory').then(function(result) {
+      expect(result).to.eql(false);
+      setImmediate(done);
+    });
+  });
+
+  it('should return false if path is a file', function(done) {
+    directoryExists(__dirname + '/directory-exists-test.js').then(function(result) {
+      expect(result).to.eql(false);
+      setImmediate(done);
+    });
+  });
+
 });
 
 describe('The directoryExists.sync function', function() {
